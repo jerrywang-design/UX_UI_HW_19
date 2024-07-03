@@ -40,14 +40,6 @@ body {
     background-size: cover;
   }
 
-  /* paintbrush cursor */
-  /* https://www.shecodes.io/athena/5042-how-to-change-the-cursor-when-hovering-over-a-button 
-    https://developer.mozilla.org/en-US/docs/Web/CSS/cursor */
-  .heroImg:hover { 
-    cursor: url(../images/cursor_paintbrush.jpg), crosshair;
-  }
-  /* End paintbrush cursor */
-
   /* Text styles */
   .hero1 {
     font-size: xx-large;
@@ -138,62 +130,6 @@ body {
     overflow: hidden;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
   }*/
-  
-  /* Eraser start */
-  * {
-    -webkit-touch-callout: none;
-    /* prevent callout to copy image, etc when tap to hold */
-    -webkit-text-size-adjust: none;
-    /* prevent webkit from resizing text to fit */
-    /* make transparent link selection, adjust last value opacity 0 to 1.0 */
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-user-select: none;
-    user-select: none;
-    /* prevent copy paste, to allow, change 'none' to 'text' */
-    /* -webkit-tap-highlight-color: rgba(0,0,0,0); */
-}
-
-a {
-    color: #000;
-}
-a.box {
-    text-decoration: none;
-    display: inline-block;
-    color: #FFF;
-    background: #000;
-    padding: 10px;
-    margin: 10px;
-}
-.big {
-    font-size: 2em;
-    display: inline-block;
-    margin: 10px;
-}
-.container {
-    position: relative;
-    display: inline-block;
-    width: 533px;
-    height: 800px;
-}
-#fullColor {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    top: 10vh;
-    left: 0vw;
-
-    z-index: 1;
-}
-#blackWhite {    
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    top: 10vh;
-    left: 0vw;
-
-    z-index: 2;
-}
-  /* Eraser end */
 
   .flexContainer {
     display: flex;
@@ -232,4 +168,27 @@ a.box {
     display: inline-block;
     padding: 0px 7px;
   }
+
+
+  /* Canvas Eraser from: https://codepen.io/progrape/pen/XXBwWe */
+  .box {
+    display: inline-block;
+    background: url("../images/bg_1_fullColor.png"); /* full color img (that remains at bottom) */
+    background-size: cover;
+    /* defining width and height seem to mess up the fullColor img's semi-responsive ability. */
+  }
+
+  canvas {
+    background: transparent;
+  }
+/* end Canvas Eraser */
+
+
+/* Paintbrush Cursor from: https://www.shecodes.io/athena/5042-how-to-change-the-cursor-when-hovering-over-a-button 
+    More info: https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
+    */
+    .paintbrush:hover { 
+      cursor: url(../images/cursor_paintbrush_flaticon3.png), crosshair;
+    }
+    /* End paintbrush cursor */
   
