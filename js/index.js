@@ -1,7 +1,7 @@
 // Canvas Eraser courtesy of: source: https://codepen.io/progrape/pen/XXBwWe
 
  // black & white img (to be erased)
- var url = '../images/bg_1_blackWhite.png'; 
+ var url = "../images/bg_1_blackWhite.png"; 
   var canvas = document.getElementById('canvas');
   var ctx = canvas.getContext('2d');
   var img = new Image();
